@@ -1,6 +1,6 @@
 const title = "Abdullaev Abdurashid";
 const description = "Programmer, front-end developer, innovator";
-tfolio
+
 const SEO = {
   title,
   description,
