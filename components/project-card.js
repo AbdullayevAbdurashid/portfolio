@@ -26,7 +26,7 @@ const ProjectCard = ({ name, description, logo, link, type }) => {
   };
 
   return (
-    <Link href={link} unstyled>
+    <Link href={link} unstyled _hover={{ cursor: "pointer" }}>
       <HStack
         p={4}
         bg={useColorModeValue("white", "neutralD.100")}

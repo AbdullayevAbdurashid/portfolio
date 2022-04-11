@@ -25,6 +25,7 @@ const ThemeToggle = ({ mobile }) => {
     toggleColorMode();
     colorMode === "dark" ? play({ id: "on" }) : play({ id: "off" });
   };
+  const label = colorMode === "dark" ? "Light " : "Dark "
 
   return (
     <Tooltip
@@ -32,9 +33,9 @@ const ThemeToggle = ({ mobile }) => {
       aria-label="A tooltip"
     >
       {mobile ? (
-        <Button
+        <MobileMenuButton
           size="sm"
-          leftIcon={
+          icon={
             colorMode === "dark" ? (
               <Icon as={SunIcon} />
             ) : (
@@ -42,9 +43,10 @@ const ThemeToggle = ({ mobile }) => {
             )
           }
           onClick={handleClick}
+          label={label}
         >
-          {colorMode === "dark" ? "Light Mode" : "Dark Mode"}
-        </Button>
+
+        </MobileMenuButton>
       ) : (
         <IconButton
           isRound

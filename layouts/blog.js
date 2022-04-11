@@ -36,13 +36,12 @@ const PlayIconWrapper = () => {
 class BlogLayout extends React.Component {
   render() {
     const target = React.createRef();
-
     return (
       <PageTransition>
         <>
           <Section>
             <BlogSeo
-              url={`https://danielwirtz/blog/${this.props.frontMatter.slug}`}
+              url={`https://abdullayev.uz.vercel.app/blog/${this.props.frontMatter.slug}`}
               image={this.props.frontMatter.banner[0].thumbnails.large.url}
               {...this.props.frontMatter}
             />
@@ -93,6 +92,7 @@ class BlogLayout extends React.Component {
                   <Heading as="h1">{this.props.frontMatter.title}</Heading>
                   <AuthorCard
                     publishedAt={this.props.frontMatter.publishDate}
+                    author= {this.props.frontMatter.author.name}
                     url={
                       "https://danielwirtz.com/blog/" +
                       this.props.frontMatter.slug

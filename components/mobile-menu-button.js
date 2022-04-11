@@ -1,7 +1,7 @@
 import React from "react";
 import { VStack, Text, useColorModeValue, Icon } from "@chakra-ui/react";
 
-const MobileMenuButton = ({ label, icon, ...rest }) => {
+const MobileMenuButton = ({ label, icon, children, ...rest }) => {
   return (
     <VStack
       as="button"

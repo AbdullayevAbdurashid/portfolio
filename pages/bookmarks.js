@@ -13,7 +13,7 @@ const Bookmarks = ({ bookmarks }) => {
       <VStack spacing={8}>
         <Hero
           title="Bookmarks"
-          // subtitle="Discoveries from the World Wide Web"
+          subtitle="Discoveries from the World Wide Web"
         />
         <Section>
           <SimpleGrid columns={[2, 3]} spacing={4}>
@@ -38,7 +38,7 @@ const Bookmarks = ({ bookmarks }) => {
 };
 
 export async function getStaticProps() {
-  const url = `https://api.raindrop.io/rest/v1/raindrops/0?search=[{"key":"important","val":"true"}]&sort="-created"&perpage=30`;
+  const url = `https://api.raindrop.io/rest/v1/raindrops/0`;
 
   const res = await fetch(url, {
     method: "get",

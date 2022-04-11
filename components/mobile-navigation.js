@@ -87,10 +87,10 @@ const MobileNavigation = () => {
             ></MobileMenuButton>
           </Link>
         </Center>
-        {/* 
+
         <Center w="100%">
           <ThemeToggle mobile />
-        </Center> */}
+        </Center>
         <Center w="100%">
           <MenuToggle toggle={() => toggleOpen()} />
         </Center>

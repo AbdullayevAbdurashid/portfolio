@@ -12,17 +12,16 @@ import {
 import { format } from "timeago.js";
 import { LinkIcon, CheckIcon } from "@heroicons/react/solid";
 
-const AuthorCard = ({ readingTime, publishedAt, url }) => {
+const AuthorCard = ({ readingTime, publishedAt, url,author }) => {
   const { hasCopied, onCopy } = useClipboard(url);
-
   return (
     <Stack direction="row" justify="space-between">
       <HStack>
         <Avatar src="/avatar-small.jpg" h={10} w={10}></Avatar>
         <VStack spacing={0} align="start">
           <Text fontSize="md" fontWeight="500">
-            Daniel Wirtz
-          </Text>
+{author}     
+  </Text>
           <Text fontSize="sm" color={useColorModeValue("gray.500", "gray.200")}>
             {format(publishedAt)} • {readingTime}
           </Text>
