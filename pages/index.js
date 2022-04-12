@@ -91,26 +91,23 @@ const Home = ({ projects }) => (
 
         </Section>
         <Section>
-          <Fl align="start" spacing={8}>
-            <Flex align={"fke"}>
-              <Heading size="lg">Projects</Heading>
-              <chakra.a size="lg" href="" ml={"auto"} >view all</chakra.a>
-            </Flex>
+          <Flex>
+            <Heading size="lg">Projects</Heading>
+            <chakra.a color={"blue"} size="lg" href="" ml={"auto"} >view all</chakra.a>
+          </Flex>
 
-
-            <SimpleGrid columns={1} spacing={4} mt={8} w="100%">
-              {projects.map((projects) => (
-                <ProjectCard
-                  key={projects.id}
-                  name={projects.fields.name}
-                  description={projects.fields.description}
-                  logo={projects.fields.logo}
-                  link={projects.fields.link}
-                  type={projects.fields.type}
-                />
-              ))}
-            </SimpleGrid>
-          </Fl>
+          <SimpleGrid columns={1} spacing={4} mt={8} w="100%">
+            {projects.map((projects) => (
+              <ProjectCard
+                key={projects.id}
+                name={projects.fields.name}
+                description={projects.fields.description}
+                logo={projects.fields.logo}
+                link={projects.fields.link}
+                type={projects.fields.type}
+              />
+            ))}
+          </SimpleGrid>
         </Section>
       </VStack>
     </PageTransition >
