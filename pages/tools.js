@@ -20,13 +20,8 @@ import PageTransition from "../components/page-transitions";
 import { getTable } from "@/lib/airtable";
 import Section from "@/components/section";
 import BookCard from "@/components/book-card";
-
+import { Desktop } from "phosphor-react";
 import BookSuggestion from "@/components/book-suggestion";
-import {
-  BookOpenIcon,
-  DesktopComputer,
-  HeartIcon,
-} from "@heroicons/react/solid";
 import sorter from "sort-isostring";
 import { AndroidLogo, AppleLogo, Globe, Monitor } from "phosphor-react";
 import ToolCard from "../components/tool-card";
@@ -106,7 +101,7 @@ const Tools = ({ tools }) => {
                 mt={2}
               >
                 <HStack spacing={1}>
-                  <Icon as={DesktopComputer} />
+                  <Icon as={Desktop} />
                   <Text>Web</Text>
                 </HStack>
               </Tab>
