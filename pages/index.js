@@ -7,10 +7,7 @@ import {
   Text,
   Heading,
   SimpleGrid,
-  Icon,
   chakra,
-  HStack,
-  Spacer,
   Flex,
 } from "@chakra-ui/react";
 import PageTransition from "../components/page-transitions";
@@ -21,6 +18,7 @@ import { getTable } from "@/lib/airtable";
 import Link from "@/components/link";
 import SubscribeCard from "@/components/subscribe-card";
 import Chronology from "@/components/job-history";
+import VoxelDog from "@/components/voxelModel/model";
 const Home = ({ projects }) => (
   <Box>
     <PageTransition>
@@ -36,6 +34,7 @@ const Home = ({ projects }) => (
             >
               Hey, I'm Abdurashid
             </chakra.h1>
+            <VoxelDog></VoxelDog>
             <VStack>
               <Text color={"primary"} fontWeight="400">
                 I'm front-end developer and project manager in
