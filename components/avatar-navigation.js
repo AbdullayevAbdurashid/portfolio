@@ -30,7 +30,7 @@ const AvatarNavigation = () => {
   return (
     <Link href="/">
       <Avatar
-        name="Daniel Wirtz"
+        name="Abdullaev Abdurashid"
         size="sm"
         src="/avatar-small.jpg"
         cursor="pointer"

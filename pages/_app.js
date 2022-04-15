@@ -16,16 +16,8 @@ const App = ({ Component, pageProps }) => {
       <ChakraProvider theme={customTheme}>
         <NextNProgress />
         <Head>
-          <meta
-            content="width=device-width, initial-scale=1"
-            name="viewport"
-          />
-          <link
-            rel="icon"
-            type="image/png"
-            sizes="96x96"
-            href="/favicon.png"
-          />
+          <meta content="width=device-width, initial-scale=1" name="viewport" />
+          <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
           <meta name="theme-color" content="#2BB0EC" />
         </Head>
         <DefaultSeo {...SEO} />

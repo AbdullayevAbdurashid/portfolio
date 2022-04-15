@@ -11,7 +11,7 @@ import {
   chakra,
   HStack,
   Spacer,
-  Flex
+  Flex,
 } from "@chakra-ui/react";
 import PageTransition from "../components/page-transitions";
 import Section from "@/components/section";
@@ -20,6 +20,7 @@ import ProjectCard from "@/components/project-card";
 import { getTable } from "@/lib/airtable";
 import Link from "@/components/link";
 import SubscribeCard from "@/components/subscribe-card";
+import Chronology from "@/components/job-history";
 const Home = ({ projects }) => (
   <Box>
     <PageTransition>
@@ -38,14 +39,22 @@ const Home = ({ projects }) => (
             <VStack>
               <Text color={"primary"} fontWeight="400">
                 I'm front-end developer and project manager in
-                <Link variant="text" target="_blank" href="https://www.facilitator.school">
+                <Link
+                  variant="text"
+                  target="_blank"
+                  href="https://www.facilitator.school"
+                >
                   &nbsp; Innovation centre.
                 </Link>
-                &nbsp; Sometimes, i also work on freelance websites like {" "}
-                <Link variant="text" target="_blank" isExternal href="https://freelancehunt.com">
+                &nbsp; Sometimes, i also work on freelance websites like{" "}
+                <Link
+                  variant="text"
+                  target="_blank"
+                  isExternal
+                  href="https://freelancehunt.com"
+                >
                   Freelancehunt
                 </Link>
-
                 . I also hang out on{" "}
                 <Link variant="text" href="https://twitter.com/wirtzdan">
                   Telegram
@@ -81,19 +90,18 @@ const Home = ({ projects }) => (
                   leftIcon={<FileArrowDown weight="fill" />}
                   mt={4}
                 >
-                  Open or download  resume
+                  Open or download resume
                 </Button>
               </Link>
             </Box>
           </VStack>
         </Section>
         <Section>
-
-        </Section>
-        <Section>
           <Flex>
             <Heading size="lg">Projects</Heading>
-            <chakra.a color={"blue"} size="lg" href="" ml={"auto"} >view all</chakra.a>
+            <chakra.a color={"blue"} size="lg" href="" ml={"auto"}>
+              view all
+            </chakra.a>
           </Flex>
 
           <SimpleGrid columns={1} spacing={4} mt={8} w="100%">
@@ -109,9 +117,15 @@ const Home = ({ projects }) => (
             ))}
           </SimpleGrid>
         </Section>
+        <Section id="experince">
+          <Flex>
+            <Heading size="lg">Expericence</Heading>
+          </Flex>
+          <Chronology></Chronology>
+        </Section>
       </VStack>
-    </PageTransition >
-  </Box >
+    </PageTransition>
+  </Box>
 );
 
 export async function getStaticProps() {
