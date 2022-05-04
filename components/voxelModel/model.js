@@ -74,7 +74,7 @@ const VoxelDog = () => {
       controls.target = target;
       setControls(controls);
 
-      loadGLTFModel(scene, "/dog.glb", {
+      loadGLTFModel(scene, "/model.gltf", {
         receiveShadow: false,
         castShadow: false,
       }).then(() => {
@@ -93,7 +93,7 @@ const VoxelDog = () => {
           const p = initialCameraPosition;
           const rotSpeed = -easeOutCirc(frame / 120) * Math.PI * 20;
 
-          camera.position.y = 10;
+          camera.position.y = 0;
           camera.position.x =
             p.x * Math.cos(rotSpeed) + p.z * Math.sin(rotSpeed);
           camera.position.z =
@@ -107,7 +107,6 @@ const VoxelDog = () => {
       };
 
       return () => {
-        console.log("unmount");
         cancelAnimationFrame(req);
         renderer.dispose();
       };

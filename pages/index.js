@@ -116,12 +116,12 @@ const Home = ({ projects }) => (
             ))}
           </SimpleGrid>
         </Section>
-        <Section id="experince">
+        {/* <Section id="experince">
           <Flex>
             <Heading size="lg">Expericence</Heading>
           </Flex>
           <Chronology></Chronology>
-        </Section>
+        </Section> */}
       </VStack>
     </PageTransition>
   </Box>
