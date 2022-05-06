@@ -2,6 +2,11 @@ import { extendTheme } from "@chakra-ui/react";
 import { mode } from "@chakra-ui/theme-tools";
 import {
   sand,
+  indigo,
+  plum,
+  greenA,
+  greenDark,
+  indigoDark,
   sandDark,
   blue,
   blueDark,
@@ -9,6 +14,16 @@ import {
   yellowDark,
   amber,
   amberDark,
+  blueDarkA,
+  skyDark,
+  sky,
+  skyDarkA,
+  mint,
+  slateDark,
+  redA,
+  grayDark,
+  gray,
+  grayA,
 } from "@radix-ui/colors";
 
 const transformRadixToChakraFormat = (scale) => {
@@ -27,10 +42,10 @@ const transformRadixToChakraFormat = (scale) => {
   return output;
 };
 
-const radixNeutral = transformRadixToChakraFormat(sand);
-const radixNeutralDark = transformRadixToChakraFormat(sandDark);
-const radixPrimary = transformRadixToChakraFormat(blue);
-const radixPrimaryD = transformRadixToChakraFormat(blueDark);
+const radixNeutral = transformRadixToChakraFormat(gray);
+const radixNeutralDark = transformRadixToChakraFormat(slateDark);
+const radixPrimary = transformRadixToChakraFormat(yellow);
+const radixPrimaryD = transformRadixToChakraFormat(yellowDark);
 
 const customTheme = extendTheme({
   fonts: {
@@ -70,6 +85,17 @@ const customTheme = extendTheme({
       html: {
         scrollBehavior: "smooth",
       },
+
+      shadows: {
+        sm: "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+        md: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+        lg: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+        xl: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+        "2xl": "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+        outline: "0 0 0 3px rgba(66, 153, 225, 0.6)",
+        inner: "inset 0 2px 4px 0 rgba(0,0,0,0.06)",
+        none: "none",
+      },
       body: {
         color: mode("neutral.1100", "neutralD.1100")(props),
         bg: mode("neutral.100", "neutralD.50")(props),
@@ -96,6 +122,7 @@ const customTheme = extendTheme({
         },
       }),
     },
+
     Heading: {
       baseStyle: (props) => ({
         borderBottom: "2px",
@@ -105,10 +132,15 @@ const customTheme = extendTheme({
       }),
     },
     Button: {
-      baseStyle: {
+      baseStyle: (props) => ({
         fontWeight: "500",
         rounded: "lg",
-      },
+
+        _hover: {
+          transform: "translateY(-2px)",
+          boxShadow: `rgba(15, 71, 229, 0.86) 0px 4px 20px`,
+        },
+      }),
     },
     Tag: {
       baseStyle: {
@@ -127,29 +159,29 @@ const customTheme = extendTheme({
           textDecoration: "none",
         },
       },
-      // variants: {
-      //   text: {
-      //     borderBottom: "2px",
-      //     borderColor: "primary.400",
-      //     color: "primaryD.600",
-      //     transition: "all 0.3s",
-      //     transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
-      //     borderRadius: "1px",
-      //     _hover: {
-      //       color: "primary.1100",
-      //       backgroundColor: "primary.400",
-      //     },
-      //   },
-      //   gradient: {
-      //     bgGradient: "linear(to-br, blue.400,blue.300)",
-      //     bgClip: "text",
-      //     fontWeight: "500",
-      //     _hover: {
-      //       bgGradient: "linear(to-br, blue.500,blue.300)",
-      //       bgClip: "text",
-      //     },
-      //   },
-      // },
+      variants: {
+        text: {
+          borderBottom: "2px",
+          borderColor: "primary.400",
+          color: "primaryD.600",
+          transition: "all 0.3s",
+          transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
+          borderRadius: "1px",
+          _hover: {
+            color: "primary.1100",
+            backgroundColor: "primary.400",
+          },
+        },
+        gradient: {
+          bgGradient: "linear(to-br, blue.400,blue.300)",
+          bgClip: "text",
+          fontWeight: "500",
+          _hover: {
+            bgGradient: "linear(to-br, blue.500,blue.300)",
+            bgClip: "text",
+          },
+        },
+      },
     },
   },
   mdx: {
@@ -173,7 +205,7 @@ const customTheme = extendTheme({
     },
     h3: {
       mt: "3rem",
-      // mb: "0.5rem",
+      mb: "0.5rem",
       lineHeight: 1.25,
       fontWeight: "semibold",
       fontSize: "1.25rem",
@@ -191,12 +223,12 @@ const customTheme = extendTheme({
         mt: 0,
       },
     },
-    // a: {
-    //   borderBottom: "2px",
-    //   transition: "all 0.3s",
-    //   transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
-    //   borderRadius: "1px",
-    // },
+    a: {
+      borderBottom: "2px",
+      transition: "all 0.3s",
+      transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
+      borderRadius: "1px",
+    },
     hr: {
       my: "4rem",
     },

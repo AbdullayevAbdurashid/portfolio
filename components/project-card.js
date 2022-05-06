@@ -40,7 +40,12 @@ const ProjectCard = ({ name, description, logo, link, type }) => {
         spacing={4}
         transition="all 0.25s"
         transition-timing-function="spring(1 100 10 10)"
-        _hover={{ transform: "translateY(-4px)", shadow: "lg" }}
+        transition-property="all"
+        _hover={{
+          transform: "translateY(-4px)",
+          shadow: "2xl",
+          borderColor: useColorModeValue("blue.400", "blue.400"),
+        }}
       >
         <Box
           rounded="lg"

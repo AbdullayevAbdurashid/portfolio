@@ -9,6 +9,7 @@ import {
   SimpleGrid,
   chakra,
   Flex,
+  Center,
 } from "@chakra-ui/react";
 import PageTransition from "../components/page-transitions";
 import Section from "@/components/section";
@@ -17,8 +18,9 @@ import ProjectCard from "@/components/project-card";
 import { getTable } from "@/lib/airtable";
 import Link from "@/components/link";
 import SubscribeCard from "@/components/subscribe-card";
-import Chronology from "@/components/job-history";
 import VoxelDog from "@/components/voxelModel/model";
+import Skills from "@/components/skills";
+import { motion } from "framer-motion";
 const Home = ({ projects }) => (
   <Box>
     <PageTransition>
@@ -26,15 +28,39 @@ const Home = ({ projects }) => (
         <Section>
           <VStack spacing={4} align="start" fontSize="2xl">
             <chakra.h1
-              fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
+              fontSize={{ base: "3xl", sm: "4xl", md: "6xl" }}
               textAlign="center"
-              bgGradient="linear(to-r, rgba(85,88,218,1) , rgba(95,209,249,1))"
-              bgClip="text"
+              color={"blue.500"}
+              lineHeight={"110%"}
               fontWeight="extrabold"
             >
-              Hey, I'm Abdurashid
+              Hi{" "}
+              <motion.div
+                style={{
+                  marginBottom: "-20px",
+                  marginRight: "-45px",
+                  paddingBottom: "20px",
+                  paddingRight: "45px",
+                  display: "inline-block",
+                }}
+                animate={{ rotate: 20 }}
+                transition={{
+                  repeat: 7,
+                  repeatType: "mirror",
+                  duration: 0.2,
+                  delay: 0.5,
+                  ease: "easeInOut",
+                  type: "tween",
+                }}
+              >
+                👋🏻
+              </motion.div>
+              , I'm Abdurashid
             </chakra.h1>
-            <VoxelDog></VoxelDog>
+
+            <Box mb={200}>
+              <VoxelDog />
+            </Box>
             <VStack>
               <Text color={"primary"} fontWeight="400">
                 I'm front-end developer and project manager in
@@ -116,11 +142,9 @@ const Home = ({ projects }) => (
             ))}
           </SimpleGrid>
         </Section>
-        {/* <Section id="experince">
-          <Flex>
-            <Heading size="lg">Expericence</Heading>
-          </Flex>
-          <Chronology></Chronology>
+        {/* <Section full={false} id="experince">
+          <Heading size="lg">Expericence</Heading>
+          <Skills />
         </Section> */}
       </VStack>
     </PageTransition>

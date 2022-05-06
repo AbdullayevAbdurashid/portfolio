@@ -9,10 +9,10 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import MobileNavigation from "@/components/mobile-navigation";
 import NextNProgress from "nextjs-progressbar";
-
+import { AnimatePresence } from "framer-motion";
 const App = ({ Component, pageProps }) => {
   return (
-    <>
+    <AnimatePresence>
       <ChakraProvider theme={customTheme}>
         <NextNProgress />
         <Head>
@@ -29,7 +29,7 @@ const App = ({ Component, pageProps }) => {
         <Footer />
       </ChakraProvider>
       <FontFace />
-    </>
+    </AnimatePresence>
   );
 };
 

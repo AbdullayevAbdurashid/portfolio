@@ -95,8 +95,9 @@ const Header = () => {
             <AvatarNavigation />
             <HStack ml={-4} spacing={2}>
               <NavLink href="/" name="Main" />
-              <NavLink href="/about" name="About" />
+              {/* <NavLink href="/about" name="About" /> */}
               <NavLink href="/blog" name="Blog" />
+
               <Menu isOpen={isOpen}>
                 <MenuButton
                   bg={useColorModeValue("neutral.100", "neutralD.300")}
@@ -148,22 +149,6 @@ const Header = () => {
                           color={useColorModeValue("blue.500", "blue.200")}
                         />
                         <Text>Bookmarks</Text>
-                      </HStack>
-                    </MenuItem>
-                  </Link>
-                  <Link href="/tools">
-                    <MenuItem
-                      _hover={{
-                        bg: useColorModeValue("neutral.200", "neutralD.200"),
-                      }}
-                    >
-                      <HStack>
-                        <Icon
-                          as={LightningBoltIcon}
-                          size={18}
-                          color={useColorModeValue("blue.500", "blue.200")}
-                        />
-                        <Text>Tools</Text>
                       </HStack>
                     </MenuItem>
                   </Link>
