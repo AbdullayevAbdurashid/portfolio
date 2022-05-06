@@ -70,7 +70,7 @@ const Books = ({ books }) => {
               </Tab>
             </TabList>
             <TabPanels>
-              <TabPanel px={0}>
+              {/* <TabPanel px={0}>
                 <SimpleGrid columns={[1, 2]} spacingY={8} spacingX={4} mt={8}>
                   {books
                     .filter((b) => b.fields.Read === true)
@@ -109,7 +109,7 @@ const Books = ({ books }) => {
                       />
                     ))}
                 </SimpleGrid>
-              </TabPanel>
+              </TabPanel> */}
             </TabPanels>
           </Tabs>
         </Section>
