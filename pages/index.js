@@ -19,8 +19,8 @@ import { getTable } from "@/lib/airtable";
 import Link from "@/components/link";
 import SubscribeCard from "@/components/subscribe-card";
 import VoxelDog from "@/components/voxelModel/model";
-import Skills from "@/components/skills";
 import { motion } from "framer-motion";
+import { LINKEDIN_URL, TELEGRAM_URL } from "@/data/constants";
 const Home = ({ projects }) => (
   <Box>
     <PageTransition>
@@ -67,7 +67,7 @@ const Home = ({ projects }) => (
                 <Link
                   variant="text"
                   target="_blank"
-                  href="https://www.facilitator.school"
+                  href="https://www.youthinno.uz"
                 >
                   &nbsp; Innovation centre.
                 </Link>
@@ -81,14 +81,11 @@ const Home = ({ projects }) => (
                   Freelancehunt
                 </Link>
                 . I also hang out on{" "}
-                <Link variant="text" href="https://twitter.com/wirtzdan">
+                <Link variant="text" target="_blank" href={TELEGRAM_URL}>
                   Telegram
                 </Link>{" "}
                 and{" "}
-                <Link
-                  variant="text"
-                  href="https://www.linkedin.com/in/wirtzdan/"
-                >
+                <Link variant="text" target="_blank" href={LINKEDIN_URL}>
                   LinkedIn
                 </Link>
                 , where I learn, think and communicate with others.
