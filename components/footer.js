@@ -8,6 +8,13 @@ import {
   IconButton,
   Icon,
 } from "@chakra-ui/react";
+import {
+  GITHUB_URL,
+  TWITTER_URL,
+  LINKEDIN_URL,
+  YOUTUBE_URL,
+  EMAIL_URL,
+} from "@/data/constants";
 import Container from "../components/container";
 import NextLink from "next/link";
 import { PencilAltIcon, MailIcon } from "@heroicons/react/outline";
@@ -47,44 +54,39 @@ const Footer = () => {
         display={{ base: "none", md: "flex" }}
         my={8}
       >
-        <FooterLink href="mailto:daniel@danielwirtz.com" name="Contact" />
-        {/* <Text
+        <FooterLink
+          href="mailto:abdulllayevabdurashid@gmail.com"
+          name="Contact"
+        />
+        <Text
           fontSize="sm"
           color={useColorModeValue("neutral.800", "neutralD.800")}
         >
-          © {date} Daniel Wirtz{" "}
-        </Text> */}
+          © {date} Abdullaev Abdurashid{" "}
+        </Text>
         <HStack spacing={4}>
-          <Link href="https://twitter.com/wirtzdan/" isExternal unstyled>
+          <Link href={TWITTER_URL} isExternal unstyled>
             <IconButton
               size="sm"
               icon={<Icon as={TwitterLogo} weight="fill" />}
               color={useColorModeValue("neutral.800", "neutralD.1000")}
             ></IconButton>
           </Link>
-          <Link
-            href="https://www.linkedin.com/in/wirtzdan/"
-            isExternal
-            unstyled
-          >
+          <Link href={LINKEDIN_URL} target="_blank" isExternal unstyled>
             <IconButton
               size="sm"
               icon={<LinkedinLogo weight="fill" />}
               color={useColorModeValue("neutral.800", "neutralD.1000")}
             ></IconButton>
           </Link>
-          <Link href="https://github.com/wirtzdan" isExternal unstyled>
+          <Link href={GITHUB_URL} target="_blank" isExternal unstyled>
             <IconButton
               size="sm"
               icon={<GithubLogo weight="fill" />}
               color={useColorModeValue("neutral.800", "neutralD.1000")}
             ></IconButton>
           </Link>
-          <Link
-            href="https://www.youtube.com/channel/UCje_bQMr6F45x0Auii7IOvA"
-            unstyled
-            isExternal
-          >
+          <Link href={YOUTUBE_URL} target="_blank" unstyled isExternal>
             <IconButton
               size="sm"
               icon={<YoutubeLogo weight="fill" />}

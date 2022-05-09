@@ -4,16 +4,16 @@ const description = "Programmer, front-end developer, innovator";
 const SEO = {
   title,
   description,
-  canonical: "https://abdurashid.vercel.app",
+  canonical: "https://abdullaev.xyz",
   openGraph: {
     type: "website",
     locale: "en_IE",
-    url: "https://abdurashid.vercel.app",
+    url: "https://abdullaev.xyz",
     title,
     description,
     images: [
       {
-        url: "https://danielwirtz.com/static/images/banner.jpg",
+        url: "https://abdullaev.xyz/static/images/banner.jpg",
         alt: title,
         width: 2240,
         height: 1260,

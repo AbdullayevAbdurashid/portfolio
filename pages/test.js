@@ -32,6 +32,8 @@ const LightDarkSwitcher = () => {
   const scaleSun = useMotionValue(isChecked ? 0 : 1);
   const pathLengthMoon = useTransform(scaleMoon, [0.6, 1], [0, 1]);
   const pathLengthSun = useTransform(scaleSun, [0.6, 1], [0, 1]);
+  console.log(process.env.RAINDROP_ACCESS_TOKEN);
+  console.log("process.env.WEBSITE_URL");
 
   return (
     <div>

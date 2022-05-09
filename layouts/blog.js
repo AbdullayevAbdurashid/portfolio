@@ -41,7 +41,7 @@ class BlogLayout extends React.Component {
         <>
           <Section>
             <BlogSeo
-              url={`https://abdullayev.uz.vercel.app/blog/${this.props.frontMatter.slug}`}
+              url={`https://abdullaev.xyz/blog/${this.props.frontMatter.slug}`}
               image={this.props.frontMatter.banner[0].thumbnails.large.url}
               {...this.props.frontMatter}
             />
@@ -92,9 +92,9 @@ class BlogLayout extends React.Component {
                   <Heading as="h1">{this.props.frontMatter.title}</Heading>
                   <AuthorCard
                     publishedAt={this.props.frontMatter.publishDate}
-                    author= {this.props.frontMatter.author.name}
+                    author={this.props.frontMatter.author.name}
                     url={
-                      "https://danielwirtz.com/blog/" +
+                      "https://abdullaev.xyz/blog/" +
                       this.props.frontMatter.slug
                     }
                     readingTime={this.props.frontMatter.readingTime.text}
