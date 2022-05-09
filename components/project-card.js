@@ -26,7 +26,7 @@ const ProjectCard = ({ name, description, logo, link, type }) => {
   };
 
   return (
-    <Link href={link} unstyled _hover={{ cursor: "pointer" }}>
+    <Link href={link} target="_blank" unstyled _hover={{ cursor: "pointer" }}>
       <HStack
         p={4}
         bg={useColorModeValue("white", "neutralD.100")}
@@ -44,7 +44,7 @@ const ProjectCard = ({ name, description, logo, link, type }) => {
         _hover={{
           transform: "translateY(-4px)",
           shadow: "2xl",
-          borderColor: useColorModeValue("blue.400", "blue.400"),
+          borderColor: data.lightMuted,
         }}
       >
         <Box
@@ -68,7 +68,7 @@ const ProjectCard = ({ name, description, logo, link, type }) => {
             src={logo ? logo[0].thumbnails.large.url : "/"}
             height={36}
             width={36}
-            layout="fixed"
+            // layout="fixed"
             rounded="md"
           ></Image>
         </Box>

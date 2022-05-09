@@ -120,7 +120,7 @@ const Home = ({ projects }) => (
         </Section>
         <Section>
           <Flex>
-            <Heading size="lg">Projects</Heading>
+            <Heading size="lg">PROJECTS</Heading>
             <chakra.a color={"blue"} size="lg" href="" ml={"auto"}>
               view all
             </chakra.a>
