@@ -15,7 +15,7 @@ export default function Blog({ source, frontMatter }) {
     </BlogLayout>
   );
 }
-
+//update data if new
 export async function getStaticPaths() {
   const paths = await getAllPostsPaths();
 
