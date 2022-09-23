@@ -40,6 +40,7 @@ class MyDocument extends Document {
             sizes="16x16"
             type="image/png"
           />
+       <script async defer data-website-id="7590ee70-ce2c-4ecf-9e97-ceb2deec9e78" src="https://analytics-kwnlrhrk2-abdullayevabdurashid.vercel.app/umami.js"></script>
           <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
           <meta content="#3182CE" name="theme-color" />
           <meta content="#3182CE" name="msapplication-TileColor" />
