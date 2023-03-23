@@ -1,7 +1,7 @@
 {
   "name": "new-website",
   "version": "1.0.0",
-  "author": "Daniel Wirtz",
+  "author": "Abdurashid",
   "dependencies": {
     "@chakra-ui/react": "^1.2.1",
     "@emotion/react": "^11.1.2",
@@ -51,7 +51,7 @@
     "use-sound": "^4.0.1"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev ",
     "build": "next build",
     "start": "next dev",
     "inspect": "NODE_OPTIONS='--inspect' next dev -p 5000"

@@ -14,7 +14,7 @@ import { TwitterLogo } from "phosphor-react";
 import { ArrowNarrowRight } from "@heroicons/react/solid";
 
 const TwitterCard = ({ title, slug }) => {
-  const url = "https://danielwirtz.com/blog/" + slug;
+  const url = "https://abdullaev.xyz/blog/" + slug;
 
   return (
     <VStack
@@ -32,9 +32,8 @@ const TwitterCard = ({ title, slug }) => {
     >
       <Text>Did you like the article?</Text>
       <Link
-        href={`https://twitter.com/intent/tweet?text=${
-          encodeURIComponent(title) + " " + "by @wirtzdan"
-        }&url=${encodeURIComponent(url)}`}
+        href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(title) + " " + "by @wirtzdan"
+          }&url=${encodeURIComponent(url)}`}
         unstyled
       >
         <LightMode>
