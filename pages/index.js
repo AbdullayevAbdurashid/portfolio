@@ -104,7 +104,7 @@ const Home = ({ projects }) => (
                 </Button>
               </Link>
               &nbsp;
-              <Link href="https://twitter.com/wirtzdan" unstyled>
+              <Link href="https://rxresu.me/marvel20182019/abdurashid" unstyled>
                 <Button
                   colorScheme="yellow"
                   rounded="xl"
