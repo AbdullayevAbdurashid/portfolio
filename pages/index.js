@@ -92,7 +92,7 @@ const Home = ({ projects }) => (
               </Text>
             </VStack>
             <Box>
-              <Link href="https://twitter.com/wirtzdan" unstyled>
+              <Link href="https://t.me/abdurashid_abdullaev" unstyled>
                 <Button
                   colorScheme="telegram"
                   rounded="xl"
